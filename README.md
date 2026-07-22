@@ -5,12 +5,13 @@
 
 ## 路线图
 
-* format: `commonjs`、`iife`、`umd`
+* format: `commonjs（cjs）`、`iife`、`amd`、`umd`
 * `rollup.config.js`
-* `globals`、`external`
 * `commonjs()`、`nodeResolve()`
+* `globals`、`external`
 * `babel()`、`terser()`
 * `postcss()`
+* `vue`
 
 
 ```bash
@@ -18,7 +19,21 @@ pnpm add rollup -D
 ```
 
 ```bash
-npx rollup -c
+pnpx rollup ./src/783.js -o dist/bundle.js
+```
+
+```bash
+pnpx rollup -c
+```
+
+## Vue
+
+```bash
+pnpm add vue
+pnpm add rollup-plugin-vue @vue/compiler-sfc -D
+```
+```bash
+pnpm add @rollup/plugin-replace -D
 ```
 
 ## Plugins
